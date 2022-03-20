@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>Форма добавления студента</h1>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.StudentId" name="StudentId" />
+            <table>
+                <tr>
+                    <td><p>Введите имя студента</p></td>
+                    <td><input type="text" name="firstname" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введите фамилию студента</p></td>
+                    <td><input type="text" name="lastname" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введите номер группы студента</p></td>
+                    <td><input type="text" name="group" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Оценка по Windows Forms Course</p></td>
+                    <td><input type="text" name="winFormAssessment" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Оценка по C# Course</p></td>
+                    <td><input type="text" name="cAssessment" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Оценка по Transact SQL Course</p></td>
+                    <td><input type="text" name="aspAssessment" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Оценка по ASP.NET Course</p></td>
+                    <td><input type="text" name="sqlAssessment" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Оценка по ADO.NET Course</p></td>
+                    <td><input type="text" name="adoAssessment" /> </td>
+                </tr>
+                <tr><td><input type="submit" value="Добавить" /> </td><td></td></tr>
+            </table>            
+        </form>
+    </div>
+</body>
+</html>

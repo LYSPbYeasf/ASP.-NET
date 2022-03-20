@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+    <title>Форма учета успеваемости студентов</title>
+</head>
+<body>
+    <div>
+        <h1>Студенты</h1>
+        <table>
+            <tr>
+                <td><p>Имя</p></td>
+                <td><p>Фамилия</p></td>
+                <td><p>Номер группы</p></td>
+                <td><p>Windows Forms Course</p></td>
+                <td><p>C# Course</p></td>
+                <td><p>Transact SQL Course</p></td>
+                <td><p>ASP.NET Course</p></td>
+                <td><p>ADO.NET Course</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Students)
+            {
+                <tr>
+                    <td><p>@b.firstName</p></td>
+                    <td><p>@b.lastName</p></td>
+                    <td><p>@b.group</p></td>                    
+                    <td><p>@b.winFormAssessment</p></td>
+                    <td><p>@b.cAssessment</p></td>
+                    <td><p>@b.aspAssessment</p></td>
+                    <td><p>@b.sqlAssessment</p></td>
+                    <td><p>@b.adoAssessment</p></td>
+                    <td>
+                        <p>
+                            <a href="/Home/ChangeStudent?StudentId=@b.StudentId&firstName=@b.firstName
+                              &lastName=@b.lastName&group=@b.group&winFormAssessment=@b.winFormAssessment&cAssessment=@b.cAssessment&aspAssessment=@b.aspAssessment&sqlAssessment=@b.sqlAssessment&adoAssessment=@b.adoAssessment">
+                                Изменить
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+            }
+        <tr>
+            <td><p><a href="/Home/AddStudent">Добавить студента</a></p></td>
+            <td><p><a href="/Home/Best">5 лучших студентов </a></p></td>
+            <td><p><a href="/Home/Worst">5 худших студентов</a></p></td>
+            <td><p><a href="/Home/ListSumm">Список студентов</a></p></td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>

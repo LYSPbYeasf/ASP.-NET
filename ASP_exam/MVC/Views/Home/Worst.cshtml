@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+    <title>Форма учета успеваемости студентов</title>
+</head>
+<body>
+    <div>
+        <h1>5 худших студентов</h1>
+        <table class="worst">
+            <tr>
+                <td><p>Имя</p></td>
+                <td><p>Фамилия</p></td>
+                <td><p>Номер группы</p></td>
+                <td><p>Сумма баллов</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Worst)
+            {
+                <tr class="worst">
+                    <td><p>@b.firstName</p></td>
+                    <td><p>@b.lastName</p></td>
+                    <td><p>@b.group</p></td>
+                    <td><p>@b.sumAssessment</p></td>
+                    <td>
+                        <p>
+                            <a href="/Home/ChangeStudent?StudentId=@b.StudentId&firstName=@b.firstName
+                              &lastName=@b.lastName&group=@b.group&winFormAssessment=@b.winFormAssessment&cAssessment=@b.cAssessment
+                               &aspAssessment=@b.aspAssessment&sqlAssessment=@b.sqlAssessment&adoAssessment=@b.adoAssessment">
+                                Изменить
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+            }
+        </table>
+        <p>
+            @Html.ActionLink("Вернуться на главную", "Index")
+        </p>
+    </div>
+</body>
+</html>
