@@ -1,0 +1,50 @@
+﻿h1, h2 {
+    margin: 0px;
+    padding: 2px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rebeccapurple;
+}
+
+button[type=submit] {
+    margin-top: 15px;
+    padding: 5px;
+    box-shadow: unset;
+}
+
+table, td, th {
+    border: thin solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: lightpink;
+}
+
+div {
+    vertical-align: middle;
+}
+
+
+#masterBody {
+    width: 800px;
+    height: 1000px;
+    position: absolute;
+    margin-left: -400px;
+    margin-top: -450px;
+    top: 50%;
+    left: 50%;
+}
+
+.footer_menu li {
+    margin: 0px;
+    padding: 0 20px;
+    display: inline;
+    border-right: 1px solid #000000;
+}
+
+.footer {
+    font-size: 18px;
+    text-align: left;
+}
