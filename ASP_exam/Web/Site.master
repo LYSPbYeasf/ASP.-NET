@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="Styles.css" />
+    <style type="text/css">
+    </style>
+</head>        
+<body id="masterBody">
+    <form id="form1" runat="server">
+         <table class="auto-style2">
+            <tr>
+                <td class="auto-style14">
+                    <div><asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                        EnableViewState="False" ForeColor="#9933FF" BackColor="#FFCCFF" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" StaticSubMenuIndent="10px" style="text-decoration: underline">
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                         <Items>
+                            <asp:MenuItem NavigateUrl="~/StudentInput.aspx" Text="Форма регистрации студентов"/>
+                            <asp:MenuItem NavigateUrl="~/BestFive.aspx" Text="5 лучших студентов"/>
+                            <asp:MenuItem NavigateUrl="~/StudentList.aspx" Text="Список студентов"/>
+                            <asp:MenuItem NavigateUrl="~/WorstFive.aspx" Text="5 худших студентов"/>
+                         </Items>
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="lightpink" />
+                    </asp:Menu>
+                    </div>
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    <div><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">      
+                         </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="footer">
+                        <asp:Literal ID="VisitorLiteral" runat="server" />
+                    </div>
+                </td>
+            </tr>
+           </table>        
+    </form>
+</body>
+</html>
